@@ -46,7 +46,35 @@ Fontes abertas que selecionei e carreguei no NotebookLM:
 
 **Conclusão:** pedir contexto e fontes melhorou muito a organização, mas aumentou o risco de a IA "preencher lacunas" para atender ao pedido. Citar fontes não garante que a citação esteja correta.
 
-(repita a mesma estrutura acima)
+### Pergunta 2: O que é margem de contribuição?
+
+**Prompt inicial:**
+> O que é margem de contribuição?
+
+**Resultado:** explicação completa e fiel à cartilha do SEBRAE: fórmula (Margem de Contribuição = Vendas − (Custos Variáveis + Despesas Variáveis)), diferença entre margem unitária, total e percentual, e o alerta sobre o erro de confundir margem com o percentual aplicado sobre o custo (markup). Não indicou claramente as fontes.
+
+**Prompt refinado:**
+> Compare como as fontes definem margem de contribuição. Mostre onde concordam, onde divergem e dê um exemplo numérico simples.
+
+**Resultado:** organizou a resposta por fonte e citou os nomes corretamente. Destaques:
+- reconheceu que o e-book de fluxo de caixa não trata do tema, em vez de forçar uma citação;
+- mostrou o que cada fonte acrescenta: o alerta sobre markup (SEBRAE), os três tipos de ponto de equilíbrio (ABEPRO) e a diferença entre margem unitária e total (UNIFACVEST).
+
+Pontos de atenção:
+- as fontes não divergem de fato, apenas têm ênfases diferentes; a IA tentou atender ao pedido de "mostrar divergências" mesmo sem haver;
+- o exemplo numérico (preço R$ 100, custo R$ 40) foi inventado, embora as fontes tenham exemplos próprios.
+
+**Conclusão:** renomear as fontes no NotebookLM com nomes curtos parece ter ajudado a IA a citá-las corretamente. E a forma de pedir importa: pedir "divergências" induz a IA a encontrá-las, e pedir "um exemplo" sem dizer "das fontes" abre espaço para números inventados.
+
+**Variação extra (teste de correção):**
+> Refaça o exemplo numérico usando apenas os números que aparecem nas fontes, indicando de qual fonte veio cada valor.
+
+**Resultado:** a IA trouxe três exemplos reais, um de cada fonte, com as contas corretas:
+- MC SEBRAE: preço R$ 22,50, custo R$ 15,00 e despesas variáveis de 10,5% → margem de R$ 5,14 (22,8% do preço);
+- UNIFACVEST: sabão em pó a R$ 11,00 com custo de R$ 8,35 → margem unitária de R$ 2,65 e total de R$ 159,00 (60 unidades);
+- ABEPRO: produto industrial a R$ 124,20 com custo variável de R$ 59,60 → margem de R$ 64,60 (52,01% do preço).
+
+**Conclusão:** exigir explicitamente "apenas números das fontes" eliminou os valores inventados.
 
 ---
 
@@ -75,6 +103,12 @@ Fontes abertas que selecionei e carreguei no NotebookLM:
 - **Causa:** provável confusão da IA entre duas instituições da mesma cidade (Lages/SC). É uma alucinação: a resposta parece confiável justamente por citar fontes.
 - **Solução:** conferi as citações clicando nos números da resposta dentro do NotebookLM, e não no texto copiado (ao copiar, os números de citação se perdem).
 - **Aprendizado:** pedir que a IA cite as fontes melhora a rastreabilidade, mas não substitui a conferência humana.
+
+  ### 5. Exemplo numérico inventado e fórmulas ilegíveis
+- **Problema:** ao pedir um exemplo numérico, o NotebookLM criou valores fictícios, embora as fontes tivessem exemplos reais. Além disso, ao copiar as respostas, as fórmulas vinham com códigos de formatação (como \text{} e \[) que ficam ilegíveis no GitHub.
+- **Causa:** o prompt pedia "um exemplo simples", sem exigir que viesse das fontes. Já as fórmulas usam uma linguagem de formatação matemática (LaTeX) que o NotebookLM exibe bem, mas que não aparece corretamente no README.
+- **Solução:** reformulei o pedido exigindo "apenas números que aparecem nas fontes". Para o README, reescrevi as fórmulas em texto simples.
+- **Aprendizado:** a IA faz exatamente o que o prompt permite; se a instrução deixa brecha, ela preenche com conteúdo próprio.
 
 ---
 
