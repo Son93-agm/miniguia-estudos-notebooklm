@@ -29,19 +29,22 @@ Fontes abertas que selecionei e carreguei no NotebookLM:
 
 ## 🧠 Engenharia de Prompts
 
-### Pergunta 1: [COMPLETAR: tema da pergunta]
+### Pergunta 1: O que é fluxo de caixa?
 
 **Prompt inicial:**
-> [COMPLETAR: o que você perguntou primeiro]
+> O que é fluxo de caixa?
 
-**Resultado:** [COMPLETAR: resumo do que a IA respondeu e o que achou dela]
+**Resultado:** resposta correta e bem organizada (entradas, saídas, saldo e benefícios do controle diário), mas genérica: serviria para qualquer tipo de empresa e não deixava claro de qual fonte vinha cada informação.
 
 **Prompt refinado:**
-> [COMPLETAR: a versão melhorada da pergunta]
+> Com base apenas nas fontes, explique fluxo de caixa para um gestor de pequena indústria, diferenciando o controle do que já aconteceu da projeção de caixa. Indique qual fonte sustenta cada ponto.
 
-**Resultado:** [COMPLETAR: o que melhorou na resposta e quais fontes ela citou]
+**Resultado:** resposta muito mais estruturada, separando o controle do realizado (movimento de caixa) da projeção de caixa, com uma tabela comparativa ao final. Porém, ao conferir, encontrei três problemas:
+- atribuiu informações ao "TCC da Uniplac", quando a fonte é da UNIFACVEST (erro de citação);
+- adaptou exemplos ao contexto industrial (matéria-prima, sazonalidade fabril) que não estão nas fontes, cujos casos são de restaurante e clínica;
+- misturou conceitos de ponto de equilíbrio na explicação de fluxo de caixa.
 
-### Pergunta 2: [COMPLETAR]
+**Conclusão:** pedir contexto e fontes melhorou muito a organização, mas aumentou o risco de a IA "preencher lacunas" para atender ao pedido. Citar fontes não garante que a citação esteja correta.
 
 (repita a mesma estrutura acima)
 
