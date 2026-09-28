@@ -70,11 +70,11 @@ Fontes abertas que selecionei e carreguei no NotebookLM:
 - **Solução:** não usei o resumo automático como base; fiz perguntas direcionadas e conferi nas respostas quais fontes estavam sendo citadas.
 - **Aprendizado:** a primeira impressão gerada pela IA pode ser parcial; é preciso verificar se ela representa todo o material.
 
-### 4. [COMPLETAR com o que acontecer nos testes de prompts]
-- **Problema:**
-- **Causa:**
-- **Solução:**
-- **Aprendizado:**
+### 4. A IA citou uma fonte com o nome errado
+- **Problema:** no prompt refinado sobre fluxo de caixa, o NotebookLM atribuiu informações a um "TCC da Uniplac", mas a fonte carregada é um TCC da UNIFACVEST.
+- **Causa:** provável confusão da IA entre duas instituições da mesma cidade (Lages/SC). É uma alucinação: a resposta parece confiável justamente por citar fontes.
+- **Solução:** conferi as citações clicando nos números da resposta dentro do NotebookLM, e não no texto copiado (ao copiar, os números de citação se perdem).
+- **Aprendizado:** pedir que a IA cite as fontes melhora a rastreabilidade, mas não substitui a conferência humana.
 
 ---
 
