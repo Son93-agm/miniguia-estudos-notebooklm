@@ -184,11 +184,44 @@ A partir deste teste, passei a apagar o histórico do chat antes de cada prompt,
 
 ### Resumos
 
-**Fluxo de caixa:** [COMPLETAR]
+#### 1. Fluxo de caixa
 
-**Margem de contribuição:** [COMPLETAR]
+O fluxo de caixa é o registro de todas as entradas e saídas de dinheiro da empresa em um período. Ele tem dois lados que não devem ser confundidos:
 
-**Ponto de equilíbrio:** [COMPLETAR]
+- **Movimento de caixa (o que já aconteceu):** registro diário do que efetivamente entrou e saiu, com base em comprovantes (notas fiscais, recibos, extratos) e organizado por um plano de contas.
+- **Projeção de caixa (o que vai acontecer):** estimativa das entradas e saídas futuras, construída a partir do histórico, das contas a receber e das contas a pagar. Permite antecipar meses de caixa negativo, planejar compras e se preparar para a sazonalidade.
+
+**Por que importa:** o fluxo de caixa mostra se haverá dinheiro para pagar as contas, algo que o lucro sozinho não revela. Uma empresa pode ser lucrativa e mesmo assim ficar sem caixa.
+
+**Alerta dos testes:** mesmo material didático de instituição confiável pode ter erros nas tabelas. Encontrei dois saldos inconsistentes no e-book do SEBRAE que a IA declarou como "perfeitamente ajustados".
+
+#### 2. Margem de contribuição
+
+É o que sobra de cada venda depois de pagar os custos e despesas variáveis. Esse valor "contribui" para pagar os custos fixos e, depois, gerar lucro.
+
+**Fórmula:** Margem de Contribuição = Preço de Venda − (Custos Variáveis + Despesas Variáveis)
+
+**Exemplo (MC SEBRAE):** produto vendido a R$ 22,50, com custo de R$ 15,00 e despesas variáveis de 10,5% (impostos e comissão), gera margem de R$ 5,14, ou 22,8% do preço.
+
+**Erros comuns que as fontes apontam:**
+- Confundir margem com o percentual aplicado sobre o custo (markup): somar 50% ao custo não significa ganhar 50%.
+- Colocar salários fixos da produção como custo variável.
+- Olhar só a margem unitária: um produto de margem baixa pode contribuir mais no total se vender muito (caso do frango no TCC da UNIFACVEST).
+
+#### 3. Ponto de equilíbrio
+
+É o faturamento mínimo para que a empresa não tenha lucro nem prejuízo.
+
+**Fórmulas:**
+- Em quantidade: Custos Fixos ÷ Margem de Contribuição Unitária
+- Em valor: Custos Fixos ÷ Margem de Contribuição Percentual
+
+**Três versões (ABEPRO):**
+- **Contábil:** cobre todos os custos fixos, incluindo a depreciação.
+- **Financeiro:** retira a depreciação (que não sai do caixa) e inclui pagamentos como amortização de empréstimos.
+- **Econômico:** acrescenta o custo de oportunidade do capital investido.
+
+**Principal aprendizado dos testes:** em empresas com vários produtos, o ponto de equilíbrio precisa usar a margem ponderada pelo peso real de cada produto nas vendas. O TCC analisado considerou a venda de quantidades iguais de todos os produtos e chegou a um faturamento de equilíbrio de R$ 9.909,38. Refazendo pelo mix real, o valor correto é R$ 10.139,10. Também vale fazer a "prova real": o ponto de equilíbrio em valor deve ser igual à quantidade multiplicada pelo preço, o que revelou uma distorção de arredondamento de cerca de R$ 39 no mesmo estudo.
 
 ### Glossário
 
@@ -211,9 +244,29 @@ A partir deste teste, passei a apagar o histórico do chat antes de cada prompt,
 
 ### Prompts reutilizáveis para revisão
 
-1. [COMPLETAR]
-2. [COMPLETAR]
-3. [COMPLETAR]
+Prompts testados e ajustados a partir das dificuldades encontradas. Substitua o que está entre colchetes.
+
+**Antes de usar:** dê nomes curtos às fontes no NotebookLM e apague o histórico do chat ao mudar de assunto, para evitar que respostas anteriores influenciem as novas.
+
+1. **Explicar um conceito com rastreabilidade**
+   > Com base apenas nas fontes, explique [conceito] para [público]. Indique qual fonte sustenta cada ponto e avise se alguma fonte não trata do tema.
+
+2. **Comparar fontes sem forçar divergências**
+   > Compare como as fontes tratam [conceito]. Mostre onde concordam e o que cada uma acrescenta. Se não houver divergência real, diga isso explicitamente.
+
+3. **Exemplo numérico sem valores inventados**
+   > Dê um exemplo numérico de [conceito] usando apenas números que aparecem nas fontes, indicando de qual fonte veio cada valor.
+
+4. **Auditar cálculos de uma fonte**
+   > Refaça passo a passo os cálculos de [quadro/tabela] da fonte [nome], mantendo todas as casas decimais. Aponte qualquer diferença entre o seu resultado e o da fonte.
+
+5. **Testar premissas escondidas**
+   > O cálculo de [indicador] da fonte [nome] depende de alguma premissa que não está explícita (por exemplo, proporção de vendas entre produtos)? Refaça o cálculo com os dados reais e compare.
+
+6. **Revisão rápida antes de uma aplicação prática**
+   > Crie 5 perguntas de revisão sobre [tema], com gabarito comentado e a fonte de cada resposta.
+
+**Regra de ouro:** nenhum prompt substitui a conferência humana. Sempre refaça pelo menos uma conta e clique nas citações para confirmar a origem.
 
 ---
 
