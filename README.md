@@ -108,6 +108,24 @@ Pontos de atenção:
 
 **Conclusão:** com uma pergunta específica, a IA fez uma análise excelente. Com uma pergunta genérica, deu uma falsa garantia de que parte do material estava perfeita. A qualidade da verificação depende de quem sabe onde apontar.
 
+### Pergunta 5: Glossário
+
+A partir deste teste, passei a apagar o histórico do chat antes de cada prompt, para evitar a contaminação identificada na Pergunta 4.
+
+**Prompt inicial:**
+> Faça um glossário.
+
+**Resultado:** glossário amplo, com 26 termos agrupados por tema (indicadores, tipos de ponto de equilíbrio, custos e despesas, gestão de caixa e tributação). Bem completo, mas sem indicar as fontes.
+
+**Prompt refinado:**
+> Crie um glossário com os 10 conceitos mais importantes das fontes, com definição em até 2 linhas e a fonte de cada um.
+
+**Resultado:** cumpriu o formato e citou corretamente as fontes de cada termo. Porém:
+- 4 dos 10 conceitos são variações de ponto de equilíbrio, e ficaram de fora temas centrais para pequenas empresas, como capital de giro e sazonalidade;
+- o limite de 2 linhas apagou nuances: a definição de ponto de equilíbrio contábil perdeu a menção à depreciação, que é o que o diferencia dos demais tipos.
+
+**Conclusão:** restringir quantidade e tamanho melhora a organização, mas transfere para a IA a decisão do que é "importante" e pode sacrificar precisão. Para a entrega final, combinei as duas versões e fiz minha própria seleção.
+
 ---
 
 ## 🩹 Cicatrizes (Dificuldades e Aprendizados)
@@ -174,10 +192,22 @@ Pontos de atenção:
 
 ### Glossário
 
-| Termo | Significado |
-|---|---|
-| [COMPLETAR] | [COMPLETAR] |
-| [COMPLETAR] | [COMPLETAR] |
+| Termo | Significado | Fonte |
+|---|---|---|
+| Fluxo de caixa | Registro e acompanhamento de todas as entradas e saídas de dinheiro da empresa em um período. | SEBRAE Finanças |
+| Movimento de caixa | Registro diário do que efetivamente entrou e saiu, no caixa ou no banco. | SEBRAE Finanças |
+| Projeção de caixa | Estimativa das entradas e saídas futuras, feita a partir do histórico, para planejar compras, investimentos e cortes. | SEBRAE Finanças |
+| Capital de giro | Dinheiro necessário para manter a operação funcionando no dia a dia. | SEBRAE Finanças |
+| Sazonalidade | Variação de receitas ou despesas em determinados períodos do ano. | SEBRAE Finanças |
+| Custos fixos | Gastos que não variam com o volume produzido ou vendido, como aluguel e salários. | UNIFACVEST, ABEPRO |
+| Custos variáveis | Gastos que acompanham o volume, como matéria-prima, embalagens e mercadorias para revenda. | MC SEBRAE, UNIFACVEST |
+| Despesas variáveis | Gastos que só existem quando há venda, como impostos sobre o faturamento e comissões. | MC SEBRAE |
+| Margem de contribuição | O que sobra da venda após custos e despesas variáveis, para pagar os fixos e gerar lucro. Pode ser unitária (por produto) ou total (unitária × quantidade vendida). | MC SEBRAE, UNIFACVEST |
+| Margem de contribuição ponderada | Margem média de vários produtos, calculada pelo peso real de cada um nas vendas. Necessária para o ponto de equilíbrio de empresas com mix de produtos. | Análise própria a partir de dados da UNIFACVEST |
+| Ponto de equilíbrio contábil | Faturamento em que a margem de contribuição cobre todos os custos e despesas fixos, incluindo a depreciação: lucro zero. | ABEPRO, UNIFACVEST |
+| Ponto de equilíbrio financeiro | Faturamento em que o caixa fica zerado: exclui a depreciação (que não sai do caixa) e inclui pagamentos como amortização de empréstimos. | ABEPRO |
+| Ponto de equilíbrio econômico | Faturamento que cobre os custos fixos mais o custo de oportunidade, ou seja, o que o capital renderia se aplicado em outra alternativa. | ABEPRO |
+| Depreciação | Perda de valor de máquinas, veículos e equipamentos pelo uso ou tempo; entra como custo, mas não é saída de dinheiro. | SEBRAE Finanças, ABEPRO |
 
 ### Prompts reutilizáveis para revisão
 
