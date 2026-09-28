@@ -92,6 +92,22 @@ Pontos de atenção:
 
 **Conclusão:** a IA reproduz os erros das fontes sem questioná-los e pode até apresentá-los como exemplos corretos. Conferir as contas manualmente foi indispensável.
 
+### Pergunta 4: Os cálculos das fontes estão corretos?
+
+**Prompt inicial:**
+> Os cálculos das fontes estão certos?
+
+**Resultado:** a IA identificou problemas no TCC da UNIFACVEST (arredondamento que distorce o ponto de equilíbrio em R$ 38,67, custo digitado como R$ 13,72 em vez de R$ 13,81 e o cálculo que considera a venda de 1 unidade de cada produto). Porém, afirmou que o e-book de fluxo de caixa do SEBRAE está "100% correto", e conferindo manualmente encontrei dois erros nas tabelas: um saldo não atualizado após um pagamento (R$ 890,02 em vez de R$ 820,02) e um valor de conta de água divergente entre tabela (R$ 144,59) e texto (R$ 114,59).
+
+**Observação importante:** a pergunta "crua" não era neutra, pois o NotebookLM carregava o histórico do teste anterior, em que o cálculo do TCC já tinha sido discutido.
+
+**Prompt refinado:**
+> Verifique se o cálculo do ponto de equilíbrio geral de 542,98 unidades da fonte UNIFACVEST considera as quantidades vendidas de cada produto. Refaça o cálculo ponderando pelas vendas reais de cada item e compare os resultados.
+
+**Resultado:** a IA confirmou que o TCC assumiu a venda de quantidades iguais de todos os produtos e refez o cálculo ponderado corretamente: margem média de R$ 0,908 por unidade, ponto de equilíbrio de 2.708,92 unidades e faturamento de R$ 10.139,10, contra R$ 9.909,38 no cálculo original. Conferi todas as contas.
+
+**Conclusão:** com uma pergunta específica, a IA fez uma análise excelente. Com uma pergunta genérica, deu uma falsa garantia de que parte do material estava perfeita. A qualidade da verificação depende de quem sabe onde apontar.
+
 ---
 
 ## 🩹 Cicatrizes (Dificuldades e Aprendizados)
@@ -131,6 +147,18 @@ Pontos de atenção:
 - **Causa:** o NotebookLM trata o conteúdo das fontes como verdadeiro. Ele resume e reorganiza bem, mas não audita os cálculos.
 - **Solução:** fiz a "prova real" (quantidade × preço deve igual ao valor) e refiz o cálculo ponderado pelas vendas de cada produto.
 - **Aprendizado:** fonte acadêmica não é garantia de acerto, e a IA não substitui a conferência dos números. Em finanças, uma diferença de arredondamento na margem pode mudar a meta de faturamento.
+
+  ### 7. Testes contaminados pelo histórico da conversa
+- **Problema:** o prompt "cru" da Pergunta 4 encontrou erros que eu esperava que só o prompt refinado encontraria.
+- **Causa:** o NotebookLM carrega o histórico do chat. O teste anterior já tinha discutido o cálculo do TCC, então a pergunta genérica "herdou" esse contexto.
+- **Solução:** para comparações justas entre prompts, iniciar uma conversa nova antes de cada teste.
+- **Aprendizado:** o contexto acumulado influencia as respostas, para o bem e para o mal. Na hora de avaliar um prompt, é preciso isolar as variáveis.
+
+### 8. Falsa garantia de que o material estava correto
+- **Problema:** a IA afirmou que as planilhas do e-book do SEBRAE estavam "perfeitamente ajustadas", mas, refazendo as contas, encontrei dois erros.
+- **Causa:** a IA verificou com profundidade apenas o que a conversa já tinha destacado e generalizou para o restante.
+- **Solução:** conferi manualmente os saldos das tabelas, linha a linha.
+- **Aprendizado:** "está tudo certo", vindo de uma IA, não é uma verificação. Em finanças, a conferência humana dos números continua indispensável.
 
 ---
 
