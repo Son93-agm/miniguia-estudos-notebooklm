@@ -49,10 +49,29 @@ Fontes abertas que selecionei e carreguei no NotebookLM:
 
 ## 🩹 Cicatrizes (Dificuldades e Aprendizados)
 
-- **Problema:** [COMPLETAR: ex.: a resposta veio genérica demais]
-  **Como resolvi:** [COMPLETAR: ex.: pedi para usar apenas as fontes e citar cada uma]
-- **Problema:** [COMPLETAR]
-  **Como resolvi:** [COMPLETAR]
+### 1. Links de fontes que pararam de funcionar
+- **Problema:** os primeiros links do portal SEBRAE que selecionei abriam uma página genérica de "Conteúdos", e não o material específico.
+- **Causa:** o SEBRAE reorganizou o site e os endereços antigos passaram a redirecionar para a página inicial.
+- **Solução:** busquei os materiais equivalentes na Biblioteca Digital do SEBRAE e testei cada link no navegador antes de carregar no NotebookLM.
+- **Aprendizado:** curadoria não termina ao encontrar a fonte; é preciso verificar se ela está acessível e estável.
+
+### 2. Erro enganoso ao adicionar uma fonte
+- **Problema:** ao colar o link do TCC da UNIFACVEST, o NotebookLM respondeu que "o URL precisa começar com http:// ou https://", mesmo o link já começando com https.
+- **Causa:** o endereço continha vírgulas, que o NotebookLM não aceita bem em links.
+- **Solução:** baixei o PDF e enviei como arquivo.
+- **Aprendizado:** a mensagem de erro nem sempre aponta a causa real; vale investigar antes de descartar uma boa fonte.
+
+### 3. Resumo automático que ignorou parte das fontes
+- **Problema:** com 4 fontes carregadas, o resumo inicial do caderno descreveu apenas o artigo da ABEPRO (indústria metalmecânica), ignorando as cartilhas do SEBRAE e o TCC. As perguntas sugeridas pela ferramenta também focaram só nesse artigo.
+- **Causa:** o NotebookLM parece dar mais peso a uma fonte na visão geral automática.
+- **Solução:** não usei o resumo automático como base; fiz perguntas direcionadas e conferi nas respostas quais fontes estavam sendo citadas.
+- **Aprendizado:** a primeira impressão gerada pela IA pode ser parcial; é preciso verificar se ela representa todo o material.
+
+### 4. [COMPLETAR com o que acontecer nos testes de prompts]
+- **Problema:**
+- **Causa:**
+- **Solução:**
+- **Aprendizado:**
 
 ---
 
