@@ -12,7 +12,6 @@ Trabalho como gestor financeiro em uma pequena indústria e escolhi estudar os f
 - Entender a diferença entre fluxo de caixa realizado e projetado
 - Aprender a calcular e interpretar a margem de contribuição
 - Saber calcular o ponto de equilíbrio de uma empresa com mais de uma fonte de receita
-- [COMPLETAR: algum objetivo pessoal seu, se quiser]
 
 ---
 
