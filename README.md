@@ -20,12 +20,12 @@ Trabalho como gestor financeiro em uma pequena indústria e escolhi estudar os f
 
 Fontes abertas que selecionei e carreguei no NotebookLM:
 
-1. [COMPLETAR: Nome da fonte 1](link)
-2. [COMPLETAR: Nome da fonte 2](link)
-3. [COMPLETAR: Nome da fonte 3](link)
+1. [E-book Fluxo de Caixa – SEBRAE-SP (2016)](https://bibliotecas.sebrae.com.br/chronus/ARQUIVOS_CHRONUS/bds/bds.nsf/a54c29c120d08789e9369c2da15aa9e1/$File/9880.pdf)
+2. [Margem de Contribuição: quanto sobra para sua empresa? – SEBRAE](https://bibliotecas.sebrae.com.br/chronus/ARQUIVOS_CHRONUS/bds/bds.nsf/E809A7FF3D9553E90325714700620C06/$File/NT00031FEA.pdf)
+3. [Análise da margem de contribuição e ponto de equilíbrio e sua importância para a tomada de decisões – TCC UNIFACVEST (2019)](https://www.unifacvest.edu.br/assets/uploads/files/arquivos/10dc1-trabalho-de-conclusao-de-curso---analise-da-margem-de-contribuicao-e-ponto-de-equilibrio,-e-sua-importancia-para-a-tomada-de-decisoes.pdf)
+4. [O cálculo do ponto de equilíbrio e margem de contribuição como ferramenta de gestão – ABEPRO/ENEGEP 2017](https://abepro.org.br/biblioteca/TN_STO_240_391_32939.pdf)
 
-**Critério de escolha:** [COMPLETAR: por que escolheu essas fontes, ex.: instituições confiáveis, linguagem acessível, gratuitas]
-
+**Critério de escolha:** priorizei fontes gratuitas e confiáveis, combinando material didático do SEBRAE (linguagem acessível, voltada a pequenos negócios) com trabalhos acadêmicos que aplicam os conceitos em casos reais. Testei cada link antes de carregar no NotebookLM.
 ---
 
 ## 🧠 Engenharia de Prompts
