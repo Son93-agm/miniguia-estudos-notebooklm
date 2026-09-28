@@ -76,6 +76,22 @@ Pontos de atenção:
 
 **Conclusão:** exigir explicitamente "apenas números das fontes" eliminou os valores inventados.
 
+### Pergunta 3: Como calcular o ponto de equilíbrio?
+
+**Prompt inicial:**
+> Como calcular o ponto de equilíbrio?
+
+**Resultado:** explicação completa das fórmulas em quantidade (Custos Fixos ÷ Margem Unitária) e em valor (Custos Fixos ÷ Margem Percentual), incluindo os três tipos de ponto de equilíbrio (contábil, financeiro e econômico) do artigo da ABEPRO. Curiosidade: ao final, ofereceu aplicar os cálculos "à sua fábrica", deduzindo esse contexto de perguntas anteriores.
+
+**Prompt refinado** (já incorporando o aprendizado da Pergunta 2 de exigir números das fontes):
+> Usando apenas as fontes, monte um passo a passo para calcular o ponto de equilíbrio em quantidade e em valor, com um exemplo que use somente números das fontes. Explique também as limitações do cálculo quando a empresa vende produtos diferentes.
+
+**Resultado:** usou corretamente os dados do TCC da UNIFACVEST (sabão em pó) e explicou bem que calcular o ponto de equilíbrio de um único produto gera uma meta irreal (928 unidades contra 60 vendidas). Porém, ao conferir as contas, encontrei dois problemas:
+- **Arredondamento:** o ponto de equilíbrio em valor (R$ 10.248,75) não bate com quantidade × preço (928,18 × R$ 11,00 = R$ 10.209,98), porque a margem foi arredondada de 24,09% para 24%. O erro já estava no TCC e a IA o repetiu.
+- **Contradição:** a IA explicou que o ponto de equilíbrio de vários produtos depende do mix de vendas, mas citou como exemplo "ponderado" o cálculo do TCC, que na verdade soma os preços dos produtos sem considerar as quantidades vendidas. Refazendo a conta ponderada pelas vendas reais, a margem média é de 24,26% e o ponto de equilíbrio fica em cerca de R$ 10.139.
+
+**Conclusão:** a IA reproduz os erros das fontes sem questioná-los e pode até apresentá-los como exemplos corretos. Conferir as contas manualmente foi indispensável.
+
 ---
 
 ## 🩹 Cicatrizes (Dificuldades e Aprendizados)
@@ -109,6 +125,12 @@ Pontos de atenção:
 - **Causa:** o prompt pedia "um exemplo simples", sem exigir que viesse das fontes. Já as fórmulas usam uma linguagem de formatação matemática (LaTeX) que o NotebookLM exibe bem, mas que não aparece corretamente no README.
 - **Solução:** reformulei o pedido exigindo "apenas números que aparecem nas fontes". Para o README, reescrevi as fórmulas em texto simples.
 - **Aprendizado:** a IA faz exatamente o que o prompt permite; se a instrução deixa brecha, ela preenche com conteúdo próprio.
+
+  ### 6. A IA repetiu e validou erros de cálculo da fonte
+- **Problema:** no cálculo do ponto de equilíbrio, o NotebookLM reproduziu um arredondamento do TCC que distorcia o resultado em cerca de R$ 39, e apresentou como "margem ponderada" um cálculo que não considera as quantidades vendidas de cada produto.
+- **Causa:** o NotebookLM trata o conteúdo das fontes como verdadeiro. Ele resume e reorganiza bem, mas não audita os cálculos.
+- **Solução:** fiz a "prova real" (quantidade × preço deve igual ao valor) e refiz o cálculo ponderado pelas vendas de cada produto.
+- **Aprendizado:** fonte acadêmica não é garantia de acerto, e a IA não substitui a conferência dos números. Em finanças, uma diferença de arredondamento na margem pode mudar a meta de faturamento.
 
 ---
 
